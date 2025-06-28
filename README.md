@@ -1,2 +1,4 @@
 # CloudFront
-Deliver Content Faster with Amazon CloudFront
+Deliver Content Faster with Amazon CloudFront. CloudFront speeds up content delivery by leveraging its global network of data centers, known as edge locations, to reduce delivery time by caching your content close to your end users. CloudFront fetches your content from an origin, such as an Amazon Simple Storage Service (Amazon S3) bucket, an Amazon Elastic Compute Cloud (Amazon EC2) instance, an Elastic Load Balancing (ELB) load balancer, or your own web server, when it's not already in an edge location. CloudFront can be used to deliver your entire website or application, including dynamic, static, streaming, and interactive content.
+
+In this project, we will configure an Amazon S3 bucket as the origin and test our distribution using a web browser to ensure that your content is being delivered.
