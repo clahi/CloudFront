@@ -1,19 +1,5 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.5"
-    }
-  }
-  required_version = ">= 1.7"
-}
-
-provider "aws" {
-  region = "us-east-1"
-}
-
 resource "aws_s3_bucket" "bucket" {
-  bucket = "cloud-front-saf2"
+  bucket = var.bucket_name
 
   tags = {
     Name = "My bucket"
@@ -73,7 +59,7 @@ resource "aws_s3_bucket_policy" "my-static-website-policy" {
           "s3:GetObject"
         ],
         "Resource" : [
-          "arn:aws:s3:::cloud-front-saf2/*"
+          "arn:aws:s3:::${var.bucket_name}/*"
         ]
       }
     ]
